@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "174324965951",
+    "project_id": "b2bservice-4d3b4",
+    "storage_bucket": "b2bservice-4d3b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174324965951:android:c1a911f40cc49aaff74e8a",
+        "android_client_info": {
+          "package_name": "com.manoj.joshua.b2b_service"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174324965951-dg1vbr221r6lmddfn8lhi9d2fdg2pqm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7FY919GoQY1qOl9Hisfs98ZLEORbVChI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174324965951-dg1vbr221r6lmddfn8lhi9d2fdg2pqm2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
