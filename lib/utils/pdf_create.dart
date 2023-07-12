@@ -11,70 +11,104 @@ Future<void> createPDFANDExportPrint(
 
   pdf.addPage(pw.Page(build: (pw.Context context) {
     return pw.Center(
-      child:
-          pw.Column(mainAxisAlignment: pw.MainAxisAlignment.start, children: [
-        pw.Text('Product Detail'),
-        pw.Text('Product ID'),
-        pw.Container(
-          width: 200,
-          height: 50,
-          decoration: pw.BoxDecoration(
-            color: PdfColors.white,
-            borderRadius: pw.BorderRadius.circular(10),
-          ),
-          child: pw.Text(doc![ModelProduct.keyProductId]),
-        ),
-        pw.Text('Commodity'),
-        pw.Container(
-          width: 200,
-          height: 50,
-          decoration: pw.BoxDecoration(
-            color: PdfColors.white,
-            borderRadius: pw.BorderRadius.circular(10),
-          ),
-          child: pw.Text(doc[ModelProduct.keyCommodity]),
-        ),
-        pw.Text('Brand'),
-        pw.Container(
-          width: 200,
-          height: 50,
-          decoration: pw.BoxDecoration(
-            color: PdfColors.white,
-            borderRadius: pw.BorderRadius.circular(10),
-          ),
-          child: pw.Text(doc[ModelProduct.keyBrand]),
-        ),
-        pw.Text('Pack Size'),
-        pw.Container(
-          width: 200,
-          height: 50,
-          decoration: pw.BoxDecoration(
-            color: PdfColors.white,
-            borderRadius: pw.BorderRadius.circular(10),
-          ),
-          child: pw.Text(doc[ModelProduct.keyPackSize]),
-        ),
-        pw.Text('Unit'),
-        pw.Container(
-          width: 200,
-          height: 50,
-          decoration: pw.BoxDecoration(
-            color: PdfColors.white,
-            borderRadius: pw.BorderRadius.circular(10),
-          ),
-          child: pw.Text(doc[ModelProduct.keyUnit]),
-        ),
-        pw.Text('Status'),
-        pw.Container(
-          width: 200,
-          height: 50,
-          decoration: pw.BoxDecoration(
-            color: PdfColors.white,
-            borderRadius: pw.BorderRadius.circular(10),
-          ),
-          child: pw.Text(doc[ModelProduct.keyUnit] ? 'Active' : 'Not Active'),
-        ),
-      ]),
+      child: pw.Column(
+          mainAxisAlignment: pw.MainAxisAlignment.start,
+          crossAxisAlignment: pw.CrossAxisAlignment.start,
+          children: [
+            pw.Align(
+              alignment: pw.Alignment.center,
+              child: pw.Text('Product Detail',
+                  style: pw.TextStyle(
+                      fontSize: 20,
+                      fontWeight: pw.FontWeight.bold,
+                      color: PdfColors.red)),
+            ),
+            pw.SizedBox(height: 20),
+            pw.Text('Product ID',
+                style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.bold,
+                    color: PdfColors.green)),
+            pw.Padding(
+              padding: pw.EdgeInsets.only(top: 12, bottom: 12),
+              child: pw.Text(doc![ModelProduct.keyProductId],
+                  style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.normal,
+                  )),
+            ),
+            pw.Text('Commodity',
+                style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.bold,
+                    color: PdfColors.green)),
+            pw.Padding(
+              padding: pw.EdgeInsets.only(top: 12, bottom: 12),
+              child: pw.Text(doc[ModelProduct.keyCommodity],
+                  style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.normal,
+                  )),
+            ),
+            pw.Text('Brand',
+                style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.bold,
+                    color: PdfColors.green)),
+            pw.Padding(
+              padding: pw.EdgeInsets.only(top: 12, bottom: 12),
+              child: pw.Text(doc[ModelProduct.keyBrand],
+                  style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.normal,
+                  )),
+            ),
+            pw.Text('Pack Size',
+                style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.bold,
+                    color: PdfColors.green)),
+            pw.Padding(
+              padding: pw.EdgeInsets.only(top: 12, bottom: 12),
+              child: pw.Text(doc[ModelProduct.keyPackSize],
+                  style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.normal,
+                  )),
+            ),
+            pw.Text('Unit',
+                style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.bold,
+                    color: PdfColors.green)),
+            pw.Padding(
+              padding: pw.EdgeInsets.only(top: 12, bottom: 12),
+              child: pw.Text(doc[ModelProduct.keyUnit],
+                  style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.normal,
+                  )),
+            ),
+            pw.Text('Status',
+                style: pw.TextStyle(
+                    fontSize: 16,
+                    fontWeight: pw.FontWeight.bold,
+                    color: PdfColors.green)),
+            pw.Padding(
+              padding: pw.EdgeInsets.only(top: 12, bottom: 12),
+              child: doc[ModelProduct.keyStatus]
+                  ? pw.Text("Active",
+                      style: pw.TextStyle(
+                        fontSize: 16,
+                        fontWeight: pw.FontWeight.normal,
+                      ))
+                  : pw.Text("Not Active",
+                      style: pw.TextStyle(
+                        fontSize: 16,
+                        fontWeight: pw.FontWeight.normal,
+                      )),
+            ),
+          ]),
     );
   })); // Center
 
